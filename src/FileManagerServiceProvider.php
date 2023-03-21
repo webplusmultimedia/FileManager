@@ -22,8 +22,9 @@ class FileManagerServiceProvider extends PackageServiceProvider
             ->hasAssets()
             ->hasViews();
     }
+
     public function packageBooted()
     {
-         Livewire::component('filemanager',Uploader::class);
+        Livewire::component('filemanager', Uploader::class);
     }
 }
