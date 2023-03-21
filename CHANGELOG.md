@@ -2,6 +2,10 @@
 
 All notable changes to `FileManager` will be documented in this file.
 
+## fix assets - 2023-03-21
+
+fixing js assets due to generate bad array json
+
 ## Add assets - 2023-03-21
 
 Adding  assets js and css assets
