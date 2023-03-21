@@ -17,19 +17,18 @@ use Webplusmultimedia\FileManager\Livewire\FileManager\Actions\SaveFiles;
 class Uploader extends Component
 {
     use WithFileUploads;
+
     /**
-     * @var array<int,TemporaryUploadedFile> $photos
+     * @var array<int,TemporaryUploadedFile>
      */
-    public  $photos;
+    public $photos;
 
     protected array $rules = [
         'photos.*' => 'file|mimes:pdf,docx,doc,xlsx,xls,jpg,png|max:4096',
     ];
 
     /**
-     * @param TemporaryUploadedFile $value
-     *
-     * @return void
+     * @param  TemporaryUploadedFile  $value
      */
     public function updatedPhotos($value): void
     {

@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Webplusmultimedia\FileManager\Livewire\FileManager\Actions;
 
-use Illuminate\Http\UploadedFile;
 use Livewire\TemporaryUploadedFile;
 use Webplusmultimedia\FileManager\Livewire\FileManager\DTOs\FileDTO;
 
@@ -20,7 +19,7 @@ class SaveFiles extends HasResponseMessageAction
         $root = config('filemanager.root').'/'.$folder;
         foreach ($files as $file) {
             $path = $file->storeAs($root, $file->getClientOriginalName(), 'public');
-            if($path) {
+            if ($path) {
                 $results[] = FileDTO::createFromFile($path);
             }
             $file->delete();

@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Storage;
 
 class DeleteFolder extends HasResponseMessageAction
 {
-    public function handle(string $folder):array
+    public function handle(string $folder): array
     {
         $root = config('filemanager.root').'/'.$folder;
         if (Storage::disk('public')->exists($root) and empty(Storage::disk('public')->files($root)) and empty(Storage::disk('public')->directories($root))) {

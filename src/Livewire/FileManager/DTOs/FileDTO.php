@@ -12,16 +12,15 @@ class FileDTO
         public readonly string $name,
         public readonly string $filename,
         public readonly string $url,
-        public readonly int    $size,
-    )
-    {
+        public readonly int $size,
+    ) {
     }
 
     public static function createFromFile(string $file): FileDTO
     {
         $fileInfos = pathinfo($file);
-        $extension = isset($fileInfos['extension']) ? $fileInfos['extension'] : NULL;
-        $filename = $fileInfos['filename'] . '.' . $extension;
+        $extension = isset($fileInfos['extension']) ? $fileInfos['extension'] : null;
+        $filename = $fileInfos['filename'].'.'.$extension;
 
         return new self(name: $fileInfos['filename'], filename: $filename, url: Storage::disk('public')->url($file), size: Storage::disk('public')->size($file));
     }

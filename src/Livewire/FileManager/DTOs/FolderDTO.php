@@ -18,7 +18,7 @@ class FolderDTO
     {
         $root = config('filemanager.root');
         $pathInfo = pathinfo($folder);
-        $dirname = isset($pathInfo['dirname'])?$pathInfo['dirname']:null;
+        $dirname = isset($pathInfo['dirname']) ? $pathInfo['dirname'] : null;
         $parent = ($root === $dirname or $dirname === '.') ? null : $dirname;
 
         return new self(
@@ -30,6 +30,6 @@ class FolderDTO
 
     public function toArray(): array
     {
-        return array($this);
+        return [$this];
     }
 }
