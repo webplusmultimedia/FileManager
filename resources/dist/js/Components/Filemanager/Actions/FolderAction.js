@@ -23,7 +23,7 @@ export async function SaveFolderAction(data) {
     data.isNewFolder = false
     data.files =[]
     data.setFiles()
-    data.this.folderEdit = null
+    data.folderEdit = null
 }
 /**
  *
