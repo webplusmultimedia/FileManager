@@ -1,3 +1,4 @@
+import Alpine from 'alpinejs';
 import {Filemanager} from "./Components/Filemanager/Filemanager";
 import {folder} from "./Components/Filemanager/Folder";
 import {inputEditFolder} from "./Components/Filemanager/InputEditFolder";
