@@ -55,7 +55,7 @@ class Uploader extends Component
         return (new FetchFiles())->handle($folder);
     }
 
-    public function saveFiles(null|string $folder): array
+    public function saveFiles(null|string $folder = null): array
     {
         $this->validate();
 

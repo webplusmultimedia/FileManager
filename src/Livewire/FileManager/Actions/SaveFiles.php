@@ -20,7 +20,7 @@ class SaveFiles extends HasResponseMessageAction
         foreach ($files as $file) {
             $path = $file->storeAs($root, $file->getClientOriginalName(), 'public');
             if ($path) {
-                $results[] = FileDTO::createFromFile($path);
+                $results[] = FileDTO::createFromFile($path)->toArray();
             }
             $file->delete();
         }

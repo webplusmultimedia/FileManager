@@ -24,4 +24,9 @@ class FileDTO
 
         return new self(name: $fileInfos['filename'], filename: $filename, url: Storage::disk('public')->url($file), size: Storage::disk('public')->size($file));
     }
+
+    public function toArray(): array
+    {
+        return [$this];
+    }
 }
