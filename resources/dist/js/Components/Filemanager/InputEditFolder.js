@@ -8,6 +8,7 @@ export function inputEditFolder() {
             this.isNewFolder = false
             this.selectedFolder = null
             this.setFiles()
+            this.folderEdit = null
         },
         folderValue: null,
         'editInputFolder': {
