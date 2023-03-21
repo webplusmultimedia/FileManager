@@ -40,7 +40,23 @@ Optionally, you can publish the views using, but not recommend cause failing at 
 ```bash
 php artisan vendor:publish --tag="filemanager-views"
 ```
-
+Finaly, you need to compile your assets with the assets of FileManager like that :
+```css
+/* before @tailwind base in your resources/css/app.css */
+@import "./../../vendor/webplusmultimedia/filemanager/resources/dist/css/filemanager.css";
+@tailwind base;
+```
+```javascript
+/*  in your resources/js/app.js */
+import './../../vendor/webplusmultimedia/filemanager/resources/dist/js/filemanager'
+```
+```javascript
+/* put the line in content key on your tailwind.config.js */
+content:[
+    *** Others conf ***,
+    './vendor/webplusmultimedia/filemanager/resources/dist/js/Components/**/*.js'
+]
+```
 ## Usage
 For simple use in a blade view :
 ```html
