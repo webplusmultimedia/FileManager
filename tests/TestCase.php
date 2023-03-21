@@ -3,6 +3,7 @@
 namespace Webplusmultimedia\FileManager\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Livewire\LivewireServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 use Webplusmultimedia\FileManager\FileManagerServiceProvider;
 
@@ -12,19 +13,20 @@ class TestCase extends Orchestra
     {
         parent::setUp();
 
-        Factory::guessFactoryNamesUsing(
+        /*Factory::guessFactoryNamesUsing(
             fn (string $modelName) => 'Webplusmultimedia\\FileManager\\Database\\Factories\\'.class_basename($modelName).'Factory'
-        );
+        );*/
     }
 
-    protected function getPackageProviders($app)
+    protected function getPackageProviders($app): array
     {
         return [
+            LivewireServiceProvider::class,
             FileManagerServiceProvider::class,
         ];
     }
 
-    public function getEnvironmentSetUp($app)
+    public function getEnvironmentSetUp($app): void
     {
         config()->set('database.default', 'testing');
 
