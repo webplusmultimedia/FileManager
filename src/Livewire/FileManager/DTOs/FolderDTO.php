@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Webplusmultimedia\FileManager\Livewire\FileManager\DTOs;
 
+
 class FolderDTO
 {
     public function __construct(
@@ -30,6 +31,6 @@ class FolderDTO
 
     public function toArray(): array
     {
-        return [$this];
+        return (array) $this;
     }
 }

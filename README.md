@@ -21,7 +21,7 @@ You can install the package via composer:
 composer require webplusmultimedia/filemanager
 ```
 
-You can publish the config file and change the root :
+You can publish the config file and change the root directory if you want:
 
 ```bash
 php artisan vendor:publish --tag="filemanager-config"
