@@ -1,0 +1,61 @@
+@layer components{
+    .left__side{
+        @apply md:w-96
+    }
+    .right__side{
+        @apply w-full
+    }
+    .folder{
+        @apply flex gap-2 text-gray-500 justify-between px-3 py-1 rounded-md items-center
+    }
+    .folder:hover{
+        @apply bg-blue-50
+    }
+    .folder.active{
+        @apply bg-blue-50 text-blue-600
+    }
+    .folder.active .folder-icon svg{
+        @apply fill-blue-500
+    }
+    .folder svg.icon-plus {
+        @apply fill-gray-300
+    }
+    .folder:hover >.icon-plus {
+        @apply fill-blue-500
+    }
+    .folder.active svg.icon-plus {
+        @apply fill-blue-500
+    }
+
+    .folder .folder-icon{
+        @apply flex gap-2 items-center grow
+    }
+    [x-cloak]{
+        @apply !hidden
+    }
+    .input-component {
+        @apply  border-gray-200 invalid:border-red-500 invalid:text-red-600 focus:invalid:border-red-500 focus:invalid:ring-red-500;
+    }
+    .wrapper-webnotification{
+        @apply absolute top-2 right-6 max-w-[30rem] min-w-[25rem] flex flex-col gap-3
+
+    }
+    .webnotification{
+        @apply relative flex gap-5 items-center p-3  rounded shadow
+        before:content-[''] before:absolute before:bottom-0 before:left-0 before:right-0 before:bottom-0 before:h-1
+    }
+
+    .webnotification.success{
+        @apply before:bg-green-600 text-green-600 bg-green-100
+    }
+
+    .webnotification.info{
+        @apply text-cyan-600 bg-cyan-100 before:bg-cyan-600
+    }
+    .webnotification.warning{
+        @apply text-amber-600 bg-amber-100 before:bg-amber-600
+    }
+    .webnotification.danger{
+        @apply text-pink-600 bg-pink-100 before:bg-pink-600
+    }
+}
