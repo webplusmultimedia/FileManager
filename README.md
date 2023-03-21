@@ -5,15 +5,13 @@
 [![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/webplusmultimedia/filemanager/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/webplusmultimedia/filemanager/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/webplusmultimedia/filemanager.svg?style=flat-square)](https://packagist.org/packages/webplusmultimedia/filemanager)
 
-This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
+Want to manage your files and directories in a file manager?
 
-## Support us
+This one is for you. Here is the file manager made with alpineJs, Livewire and Tailwind CSS for Laravel.
 
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/FileManager.jpg?t=1" width="419px" />](https://spatie.be/github-ad-click/FileManager)
+This is a simple one, just adding files and directories to a root directory(default is medias) in your public storage path. You can change it in the filemanager config file.
 
-We invest a lot of resources into creating [best in class open source packages](https://spatie.be/open-source). You can support us by [buying one of our paid products](https://spatie.be/open-source/support-us).
-
-We highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using. You'll find our address on [our contact page](https://spatie.be/about-us). We publish all received postcards on [our virtual postcard wall](https://spatie.be/open-source/postcards).
+[![img.png](https://i.postimg.cc/XvQ1M2gt/img.png)](https://postimg.cc/v1xtftkv)
 
 ## Installation
 
@@ -23,14 +21,7 @@ You can install the package via composer:
 composer require webplusmultimedia/filemanager
 ```
 
-You can publish and run the migrations with:
-
-```bash
-php artisan vendor:publish --tag="filemanager-migrations"
-php artisan migrate
-```
-
-You can publish the config file with:
+You can publish the config file and change the root :
 
 ```bash
 php artisan vendor:publish --tag="filemanager-config"
@@ -40,20 +31,30 @@ This is the contents of the published config file:
 
 ```php
 return [
+    'root' => 'medias',
 ];
 ```
 
-Optionally, you can publish the views using
+Optionally, you can publish the views using, but not recommend cause failing at an future update
 
 ```bash
 php artisan vendor:publish --tag="filemanager-views"
 ```
 
 ## Usage
-
-```php
-$fileManager = new Webplusmultimedia\FileManager();
-echo $fileManager->echoPhrase('Hello, Webplusmultimedia!');
+For simple use in a blade view :
+```html
+<div class="py-12">
+    <div class="max-w-7xl mx-auto sm:px-6 lg:px-8" aria->
+        <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+            <div class="p-6 text-gray-900 ">
+                <h1 class="text-2xl uppercase font-bold mb-6">{{ __("Téléversement de fichiers") }}</h1>
+                <!-- the livewire component -->
+                <livewire:filemanager/>
+            </div>
+        </div>
+    </div>
+</div>
 ```
 
 ## Testing
@@ -76,8 +77,7 @@ Please review [our security policy](../../security/policy) on how to report secu
 
 ## Credits
 
-- [webplusm](https://github.com/webplusmultimedia)
-- [All Contributors](../../contributors)
+- [Webplusm Multimedia](https://github.com/webplusmultimedia)
 
 ## License
 
