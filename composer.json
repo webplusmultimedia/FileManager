@@ -35,8 +35,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Webplusmultimedia\\FileManager\\": "src/",
-            "Webplusmultimedia\\FileManager\\Database\\Factories\\": "database/factories/"
+            "Webplusmultimedia\\FileManager\\": "src/"
         }
     },
     "autoload-dev": {
