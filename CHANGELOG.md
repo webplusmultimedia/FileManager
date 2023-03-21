@@ -2,6 +2,10 @@
 
 All notable changes to `FileManager` will be documented in this file.
 
+## fix assets action create a folder - 2023-03-21
+
+fix assets action create a folder
+
 ## fix js app asset - 2023-03-21
 
 Adding Alpine ro filemanager.js in resources/dist
