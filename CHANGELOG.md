@@ -2,6 +2,11 @@
 
 All notable changes to `FileManager` will be documented in this file.
 
+## Add assets - 2023-03-21
+
+Adding  assets js and css assets
+Fix on creating a folder
+
 ## Change readme file - 2023-03-21
 
 Changing the readme file
