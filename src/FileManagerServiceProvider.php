@@ -2,8 +2,10 @@
 
 namespace Webplusmultimedia\FileManager;
 
+use Livewire\Livewire;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
+use Webplusmultimedia\FileManager\Livewire\FileManager\Uploader;
 
 class FileManagerServiceProvider extends PackageServiceProvider
 {
@@ -19,5 +21,9 @@ class FileManagerServiceProvider extends PackageServiceProvider
             ->hasConfigFile()
             ->hasAssets()
             ->hasViews();
+    }
+    public function packageBooted()
+    {
+         Livewire::component('filemanager',Uploader::class);
     }
 }
