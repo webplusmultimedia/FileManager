@@ -2,6 +2,10 @@
 
 All notable changes to `FileManager` will be documented in this file.
 
+## Pint & phpStan Pass - 2023-03-22
+
+Pint & phpStan Pass
+
 ## Final config for Assets js & css - 2023-03-21
 
 Add final config for Assets js & css installation
