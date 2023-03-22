@@ -1,6 +1,6 @@
 {
     "name": "webplusmultimedia/filemanager",
-    "description": "Manage files with this file manager made with alpinejs and livewire and tailwindcss",
+    "description": "Manage files with this file manager made with alpinejs, livewire and tailwind CSS",
     "keywords": [
         "webplusmultimedia",
         "laravel",

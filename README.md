@@ -35,12 +35,12 @@ return [
 ];
 ```
 
-Optionally, you can publish the views using, but not recommend cause failing at an future update
+Optionally, you can publish the views, but not recommended because will failing at an future update.
 
 ```bash
 php artisan vendor:publish --tag="filemanager-views"
 ```
-Finaly, you need to compile your assets with the assets of FileManager like that :
+Finaly, you need to compile your assets with  FileManager ones like that :
 ```css
 /* before @tailwind base in your resources/css/app.css */
 @import "./../../vendor/webplusmultimedia/filemanager/resources/dist/css/filemanager.css";
@@ -51,9 +51,9 @@ Finaly, you need to compile your assets with the assets of FileManager like that
 import './../../vendor/webplusmultimedia/filemanager/resources/dist/js/filemanager'
 ```
 ```javascript
-/* put the line in content key on your tailwind.config.js */
+/* put that line in content key on your tailwind.config.js */
 content:[
-    *** Others conf ***,
+    '*** Others paths ***',
     './vendor/webplusmultimedia/filemanager/resources/dist/js/Components/**/*.js'
 ]
 ```
