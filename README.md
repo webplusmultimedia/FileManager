@@ -43,12 +43,12 @@ php artisan vendor:publish --tag="filemanager-views"
 Finaly, you need to compile your assets with  FileManager ones like that :
 ```css
 /* before @tailwind base in your resources/css/app.css */
-@import "./../../vendor/webplusmultimedia/filemanager/resources/dist/css/filemanager.css";
+@import "./vendor/webplusmultimedia/filemanager/resources/dist/css/filemanager.css";
 @tailwind base;
 ```
 ```javascript
 /*  in your resources/js/app.js */
-import './../../vendor/webplusmultimedia/filemanager/resources/dist/js/filemanager'
+import './vendor/webplusmultimedia/filemanager/resources/dist/js/filemanager'
 ```
 ```javascript
 /* put that line in content key on your tailwind.config.js */
